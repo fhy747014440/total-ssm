@@ -1,0 +1,27 @@
+#端口号
+server:
+  port: 8080
+#Spring的配置
+spring:
+  datasource:
+    #数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    #驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #数据库连接
+    url: jdbc:mysql://localhost:3306/layui?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    #用户名
+    username: root
+    #密码
+    password: root
+    #模板引擎配置
+
+  thymeleaf:
+    cache: false
+  #配置mybatis
+mybatis:
+  #配置mapping路径
+  mapper-locations: classpath:mapper/*.xml
+  #配置mybatis驼峰命名
+  configuration:
+    map-underscore-to-camel-case: true
